@@ -1,0 +1,7 @@
+tests/
+.*
+.DS_Store
+.jest
+jest.config.js
+node_modules
+storybook-static

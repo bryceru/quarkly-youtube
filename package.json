@@ -1,0 +1,62 @@
+{
+  "name": "@bryce.ru/quarkly-youtube",
+  "version": "0.9.0",
+  "description": "quarkly module for intergrate youtube video",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && npm run build:cjs && npm run build:esm",
+    "clean": "rm -rf build && mkdir build",
+    "build:cjs": "NODE_ENV=cjs babel index.js --out-dir build/cjs --ignore src/**/*.stories.js,src/**/*.test.js,src/storyModules ",
+    "build:esm": "NODE_ENV=esm babel index.js --out-dir build/esm --ignore src/**/*.stories.js,src/**/*.test.js,src/storyModules ",
+    "publish": "npm publish --access public"
+  },
+  "main": "build/cjs",
+  "module": "build/esm",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bryceru/quarkly-youtube.git"
+  },
+  "keywords": [
+    "quarkly",
+    "youtube",
+    "npm"
+  ],
+  "author": "Vladimir Alekseev",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/bryceru/quarkly-youtube/issues"
+  },
+  "homepage": "https://github.com/bryceru/quarkly-youtube#readme",
+  "dependencies": {
+    "@quarkly/atomize": "^1.0.8",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-export-default-from": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-require-context-hook": "^1.0.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "prettier": "2.0.5",
+    "prop-types": "^15.7.2",
+    "styled-components": "^5.0.1"
+  }
+}
